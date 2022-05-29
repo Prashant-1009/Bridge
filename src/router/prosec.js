@@ -61,7 +61,7 @@ router.post("/addproduct", upload, async (req, res) => {
 
         // //Email code starts here 
         
-        //                                     const usersdata=await axios.get(process.env.fapi+'/api/formaildata',{
+        //                                     const usersdata=await axios.get('https://bridgebwus.herokuapp.com/api/formaildata',{
         //                                         params:{
         //                                                 rollno:req.body.rollno,
         //                                                 course:req.body.course,
