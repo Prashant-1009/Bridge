@@ -49,47 +49,47 @@ router.post("/login", async (req, res) => {
             if (details.password === interedpassword) 
             {
 
-                        // const reqdata = await axios.get('http://localhost:8000/api/yourreqdata', {
-                        //     params: {
-                        //         rollno: interedrollno
-                        //     }
-                        // })
+                        const reqdata = await axios.get('/api/yourreqdata', {
+                            params: {
+                                rollno: interedrollno
+                            }
+                        })
                   
-                        // const matchedreq = await axios.get('http://localhost:8000/api/matchedreqdata', {
-                        //     params: {
-                        //         rollno: interedrollno,
-                        //         course: details.course,
-                        //         branch: details.branch,
-                        //         passingyear: details.passingyear
+                        const matchedreq = await axios.get('/api/matchedreqdata', {
+                            params: {
+                                rollno: interedrollno,
+                                course: details.course,
+                                branch: details.branch,
+                                passingyear: details.passingyear
 
-                        //     }
-                        // })
-
-
-                        // const prodata = await axios.get('http://localhost:8000/api/yourproductdata', {
-                        //     params: {
-                        //         rollno: interedrollno
-                        //     }
-                        // })
+                            }
+                        })
 
 
-                        // const matchedpro = await axios.get('http://localhost:8000/api/matchedprodata', {
-                        //     params: {
-                        //         rollno: interedrollno,
-                        //         course: details.course,
-                        //         branch: details.branch,
-                        //         passingyear: details.passingyear
-
-                        //     }
-                        // })
+                        const prodata = await axios.get('/api/yourproductdata', {
+                            params: {
+                                rollno: interedrollno
+                            }
+                        })
 
 
-                        // res.status(201).render("index", {
-                        //     myinfo: details, rno: interedrollno, mno: mobile, yreqd: reqdata.data, mreqd: matchedreq.data, yproductd: prodata.data, mpd: matchedpro.data
-                        // });
+                        const matchedpro = await axios.get('/api/matchedprodata', {
+                            params: {
+                                rollno: interedrollno,
+                                course: details.course,
+                                branch: details.branch,
+                                passingyear: details.passingyear
+
+                            }
+                        })
 
 
-                        res.redirect('/del');
+                        res.status(201).render("index", {
+                            myinfo: details, rno: interedrollno, mno: mobile, yreqd: reqdata.data, mreqd: matchedreq.data, yproductd: prodata.data, mpd: matchedpro.data
+                        });
+
+
+                    
             }
 
             else 
