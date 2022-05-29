@@ -1,0 +1,99 @@
+<html>
+<head>
+   <title> Add New Request </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+   <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+ 
+   {{#ifEquals reqst 'Invalid request'}}
+            <div class="invalidreq">
+               <p> Invalid Or Incomplete Details !</p>
+            </div>
+   {{/ifEquals}}
+
+   {{#ifEquals reqst 'Request added'}}
+            <div class="reqadded">
+               <p> Request Added Successfully</p>
+            </div>
+   {{/ifEquals}}
+
+
+   <div class="main">
+      <div class="di">
+         <div class="insidereq">
+
+                  <form action="/requ/addrequest" method="post" onsubmit="refresh()">
+
+                           <div class="row">
+                              <div class="col">
+                                 <input class="form-control" type="text" name="productname" placeholder="Product Name">
+                              </div>
+                           </div>
+
+                           <br> <p style="text-align: center"> ( FROM WHOM YOU ASPECTING THIS ) </p>
+    
+                           <div class="row">
+                              <div class="col">
+                                 <select class="form-select" name="passingyear">
+                                    <option value="" disabled selected>Passing Out Year</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                 </select>
+                              </div>
+                           </div>
+
+                           <div class="row">
+
+                                 <div class="col">
+                                    <select class="form-select" name="course">
+                                       <option value="" disabled selected>Course</option>
+                                       <option value="b.tech">B.TECH</option>
+                                       <option value="m.tech">M.TECH</option>
+                                    </select>
+                                 </div>
+
+                                 <div class="col">
+                                    <select class="form-select" name="branch">
+                                       <option value="" disabled selected>Branch</option>
+                                       <option value="cs">CS</option>
+                                       <option value="it">IT</option>
+                                       <option value="ec">EC</option>
+                                       <option value="me">ME</option>
+                                    </select>
+                                 </div>
+
+                           </div>
+
+                           <input type="hidden" name="mobileno" id="mn">
+                           <input type="hidden" name="rollno" id="rn">
+
+                           <div class="row">
+                                <button type="submit" class="btn btn-warning">Add Request</button>
+                           </div>
+
+                  </form>
+
+         </div>
+      </div>
+   </div>
+
+         <script>
+                  function refresh() {
+                     localStorage.setItem("flag", 1);
+                  }
+
+                  var no = localStorage.getItem("mobileno");
+                  var ro = localStorage.getItem("rollno");
+
+                  document.getElementById("mn").value = no;
+                  document.getElementById("rn").value = ro;
+         </script>
+
+</body>
+</html>

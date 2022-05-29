@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title> Login </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+    
+    {{#ifEquals logst 'Invalid login'}}
+            <div class="invalidlog">
+                <p> Invalid Login Credentials !</p>
+            </div>
+    {{/ifEquals}}
+
+
+    <div class="main">
+        <div class="di">
+            <div class="insidelog">
+
+                        <form action="/user/login" method="post">
+
+                                    <div class="row" style="margin-top:18%">
+                                        <div class="col">
+                                            <input class="form-control" type="number" name="rollno" placeholder="Roll Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <input class="form-control" type="password" name="password" placeholder="Password">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <button type="submit" class="btn btn-warning">Login</button>
+                                    </div>
+
+                        </form>
+
+                       <p style="text-align: center ; color:black"> Not Registerd Yet ? <a href="/Register" style="text-decoration: none ;color:#ffbf00">Register</a> </p>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<h1 class="heading"><a href="/newreq" style="text-decoration: none; color: #ffbf00;"> Add Your Need&nbsp; (+) </a></h1>
+
+<section id="myreq">
+
+      <ul class="responsive-table">
+
+            <li class="table-header">
+                  <div class="col col-5 thtx">#</div>
+                  <div class="col col-1 thtx">Requested For</div>
+                  <div class="col col-2 thtx">Requested From</div>
+                  <div class="col col-3 thtx">From Batch</div>
+                  <div class="col col-4 thtx"></div>
+            </li>
+
+
+            {{#each yreqd}}
+
+            <li class="table-row">
+
+                  <div class="col col-5 texts">{{plus @key}}</div>
+                  <div class="col col-1 texts"><span style="text-transform: capitalize;">{{this.productname}}</span>
+                  </div>
+                  <div class="col col-2 texts"><span
+                              style="text-transform: uppercase;">{{this.course}}&nbsp;&nbsp;{{this.branch}}</span></div>
+                  <div class="col col-3 texts">{{this.passingyear}}</div>
+                  <div class="col col-4">
+
+                        <form method="post" action="/requ/reqdel/{{this._id}}?_method=DELETE">
+                              <button type="submit" onclick="refresh()"
+                                    class="btn btn-outline-warning btn-sm">Delete</button>
+                        </form>
+
+                  </div>
+
+            </li>
+
+            {{/each}}
+
+
+      </ul>
+</section>

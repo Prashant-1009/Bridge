@@ -1,0 +1,26 @@
+<section  id="mareq">
+    <h1 class="heading">Do You Have ?</h1>
+                      
+                 {{#if mreqd}}     
+                               
+                             <div class="autoplay">
+                                    {{#each mreqd}}
+                                                <div class="did">
+                                                        <p class="reqhe"> {{this.productname}}</p><div class="dashline"></div>
+                                                        <p class="reqinfo"> Required To :&nbsp;&nbsp;<span> {{this.rollno}}</span></p><div class="dashline"></div>
+                                                        <p class="reqinfo"> Contact No :&nbsp; &nbsp;<span> {{this.mobileno}}</span></p>
+                                                </div>  
+                                    {{/each}}
+                              </div>      
+                   {{else}}
+
+                            <div class="big">                   
+                                    <div class="nodid">  
+                                               <p style="color: gray ;margin-bottom:0px;"> NO REQUEST TO SHOW</p>
+                                    </div>  
+                           </div>
+
+                   {{/if}}                     
+                                  
+</section>
+    

@@ -1,0 +1,35 @@
+<h1 class="heading">Recommended Product &nbsp; <img src="../public/assets/correct.png" style="height:20px; width:20px;"></h1>
+
+<section id="mapro">
+
+    {{#if mpd}}
+
+                {{#each mpd}}
+                <div class="mpbox">
+
+                    <div class="mpimg">
+                        <img src="/uploads/{{this.image}}">
+                    </div>
+
+                    <div class="mptext">
+                        <div class="pron">{{this.product}}</div>
+
+                        <div class="spa"> Posted By : &nbsp;{{this.rollno}}</div>
+
+                        <div class="spa"> contact No : &nbsp;{{this.mobileno}} </div>
+
+                        <div class="spa">&#8377; &nbsp;{{this.price}}</div>
+                    </div>
+
+                </div>
+                {{/each}}
+
+    {{else}}
+            <div class="norecpro">
+
+                <p style="color: gray"> NO RECOMMENDATION FOR NOW</p>
+
+            </div>
+    {{/if}}
+
+</section>

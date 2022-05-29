@@ -1,0 +1,48 @@
+<section id="ypro">
+   <h1 class="heading"><a href="/newpro" style="text-decoration: none; color: #ffbf00;"> Add Product&nbsp; (+) </a></h1>
+
+    {{#if yproductd}}
+
+                <div class="responsive">
+                      {{#each yproductd}}
+
+                                <div class="ypbox">
+
+                                            <div class="ypimg">
+                                                    <img src="/uploads/{{this.image}}">
+                                            </div>
+
+                                            <div class="yptext">
+
+                                                    <div class="cen1">{{this.product}}</div>
+                                                    <div class="two">
+                                                        <div class="cen2"> {{this.course}} &nbsp;{{this.branch}}
+                                                        </div>
+                                                        <div class="cen3"><span>&#8377; &nbsp;{{this.price}}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <form method="post" action="/prod/prodel/{{this._id}}?_method=DELETE">
+                                                            <button type="submit" onclick="refresh()" class="btn btn-outline-warning"
+                                                                style="width: 100%">Delete Product</button>
+                                                        </form>
+                                                    </div>
+
+                                            </div>
+                                </div>
+                      {{/each}}
+                </div>
+
+    {{else}}
+            <div class="bigpro">
+                <div class="nopro">
+
+                    <p style="color: gray"> YOU HAVEN'T ADDED </p>
+
+                </div>
+
+            </div>
+    {{/if}}
+
+</section>

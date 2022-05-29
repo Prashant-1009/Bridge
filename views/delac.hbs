@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete My Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="di">
+
+            <div class="deletemyaccount">
+
+                <p style="text-align: center; margin-bottom: 30px;">Delete My Account</p>
+
+                <form action="/delmyac" method="post">
+                    <input type="hidden" name="roll" id="r">
+                    <button type="submit" class="btn btn-warning" style="width: 100%" onclick="d()">Delete Account</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+<script>
+            var ro = localStorage.getItem("rollno");
+            document.getElementById("r").value = ro;
+            function d() {
+                window.localStorage.clear();
+            }
+</script>
+
+</body>
+
+</html>

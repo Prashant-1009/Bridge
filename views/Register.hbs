@@ -1,0 +1,115 @@
+<html>
+<head>
+   <title> Register </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+   <link rel="stylesheet" href="/public/style.css">
+   
+</head>
+
+<body>
+
+   
+   {{#ifEquals regst 'Invalid registration'}}
+
+            <div class="invalid">
+               <p> Invalid Registration !</p>
+               <p style="font-size:8"> ROLL NO. OR PHONE NO. ALREADY EXIST OR INVALID EMAIL ID AND ALL FIELDS ARE COMPULSORY</p>
+            </div>
+
+   {{/ifEquals}}
+
+
+   <div class="main">
+      <div class="di">
+         <div class="inside">
+
+                     <form action="/user/Register" method="post">
+
+                              <div class="row">
+                                 <div class="col">
+                                    <input class="form-control" type="number" name="rollno" placeholder="Roll Number">
+                                 </div>
+                              </div>
+
+                              <div class="row">
+
+                                    <div class="col">
+                                       <select class="form-select" name="clgname">
+                                          <option value="" disabled selected>College Name</option>
+                                          <option value="srmcem">SRMCEM</option>
+                                          <option value="bbd">BBD</option>
+                                       </select>
+                                    </div>
+
+                                    <div class="col">
+                                       <select class="form-select" name="passingyear">
+                                          <option value="" disabled selected>Passing Out Year</option>
+                                          <option value="2022">2022</option>
+                                          <option value="2023">2023</option>
+                                          <option value="2024">2024</option>
+                                          <option value="2025">2025</option>
+                                       </select>
+                                    </div>
+
+                              </div>
+
+                             <div class="row">
+
+                                    <div class="col">
+                                       <select class="form-select" name="course">
+                                          <option value="" disabled selected>Course</option>
+                                          <option value="b.tech">B.TECH</option>
+                                          <option value="m.tech">M.TECH</option>
+                                       </select>
+                                    </div>
+
+                                    <div class="col">
+                                       <select class="form-select" name="branch">
+                                          <option value="" disabled selected>Branch</option>
+                                          <option value="cs">CS</option>
+                                          <option value="it">IT</option>
+                                          <option value="ec">EC</option>
+                                          <option value="me">ME</option>
+                                       </select>
+                                    </div>
+
+                             </div>
+
+
+                              <div class="row">
+                                 <div class="col">
+                                    <input class="form-control" type="tel" name="mobileno" placeholder="Phone Number">
+                                 </div>
+                              </div>
+
+
+
+                              <div class="row">
+
+                                       <div class="col">
+                                          <input class="form-control" type="email" name="email" placeholder="Email Id">
+                                       </div>
+
+                                       <div class="col">
+                                          <input class="form-control" type="password" name="password" placeholder="Create Password">
+                                       </div>
+                                       
+                              </div>
+
+
+                              <div class="row">
+                                 <button type="submit" class="btn btn-warning">Register</button>
+                              </div>
+
+                     </form>
+
+                    <p style="text-align: center ; color:black"> If already registerd ? <a href="/login" style="text-decoration: none ;color:#ffbf00">Login</a> </p>
+
+         </div>
+      </div>
+   </div>
+
+
+</body>
+</html>

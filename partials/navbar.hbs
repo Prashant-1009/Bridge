@@ -1,0 +1,43 @@
+<div id="nav-container">
+    <header tabindex="0">Bridge </header>
+    <div class="bg"></div>
+
+    <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+
+    <div id="nav-content" tabindex="0">
+        <ul>
+            <li style="text-align: center"><img src="../public/assets/user.png" height="0px" width="0px">
+                <div class="dashcon"></div>
+            </li>
+            <li>Roll No : <span style="font-size: 11 ;">{{myinfo.rollno}}</span></li>
+            <li>College : <span style="text-transform: Uppercase;"> {{myinfo.clgname}}
+                </span></li>
+            <li>Course : <span style="text-transform: Uppercase;"> {{myinfo.course}}
+                </span></li>
+            <li>Branch : <span style="text-transform: Uppercase;"> {{myinfo.branch}}
+                </span></li>
+            <li>Passing Out Year : <span> {{myinfo.passingyear}}</span></li>
+            <li>Phone No : <span> {{myinfo.mobileno}}</span></li>
+            <li>Email : <span>{{myinfo.email}}</span>
+                <div class="dashcon"></div>
+            </li>
+
+            <li><button type="button" class="btn btn-warning" style="width: 100%" onclick="signout()">Sign
+                    Out</button>
+                <div class="dashcon"></div>
+            </li>
+            <li><button type="button" class="btn btn-outline-warning" style="width: 100%">About Us </button>
+                <div class="dashcon"></div>
+            </li>
+            <li><button type="button" class="btn btn-warning" style="width: 100%" onclick="acdel()">Delete My
+                    Account</button>
+                <div class="dashcon"></div>
+            </li>
+            <li class="small">Copyright &copy; 2022</li>
+        </ul>
+    </div>
+</div>
