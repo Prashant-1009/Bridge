@@ -101,7 +101,8 @@ router.post("/login", async (req, res) => {
     }
      catch (error)
       {
-        res.render("login",{logst:"Invalid login"})
+          res.send(error);
+        //res.render("login",{logst:"Invalid login"})
       }
 
 
