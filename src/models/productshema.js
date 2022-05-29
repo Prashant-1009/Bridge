@@ -63,6 +63,6 @@ const Productschema = new mongoose.Schema({
 })
 
 
-const Product = new mongoose.model(process.env.pr, Productschema);
+const Product = new mongoose.model("product", Productschema);
 
 module.exports = Product;
