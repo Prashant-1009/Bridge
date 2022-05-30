@@ -13,10 +13,10 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
 var transporter = nodemailer.createTransport({
-    service: process.env.ser,
+    service: 'hotmail',
     auth: {
-        user: process.env.emm,
-        pass: process.env.pss
+        user:'bridgebetweenus@outlook.com',
+        pass:'1901220100078@'
     }
 });
 
