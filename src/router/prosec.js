@@ -59,56 +59,56 @@ router.post("/addproduct", upload, async (req, res) => {
 
         const added = await newpro.save();
 
-        // //Email code starts here 
+        //Email code starts here 
         
-        //                                     const usersdata=await axios.get('https://bridgebwus.herokuapp.com/api/formaildata',{
-        //                                         params:{
-        //                                                 rollno:req.body.rollno,
-        //                                                 course:req.body.course,
-        //                                                 branch:req.body.branch,
-        //                                                 passingyear:req.body.passingyear
+                                            const usersdata=await axios.get('https://bridgebwus.herokuapp.com/api/formaildata',{
+                                                params:{
+                                                        rollno:req.body.rollno,
+                                                        course:req.body.course,
+                                                        branch:req.body.branch,
+                                                        passingyear:req.body.passingyear
 
-        //                                             }
-        //                                         })
+                                                    }
+                                                })
 
-        //                                     const users=usersdata.data;
-        //                                     var listofemails=[];
+                                            const users=usersdata.data;
+                                            var listofemails=[];
 
-        //                                     for(var i=0;i<users.length;i++)
-        //                                         {
-        //                                                 listofemails.push((users[i].email));
-        //                                         }
-
-
-        //                                     console.log(listofemails);    //  var listofemails = ["prashantsh@gmail.com","prashant1sh@gmail.com"]; 
-
-        //                                     if(listofemails.length>0)
-        //                                     {
-        //                                             try{
-
-        //                                                     var mailOptions = {
-        //                                                     from:'Bridge<bridgebetweenus@outlook.com>',
-        //                                                     bcc: listofemails,
-        //                                                     subject: 'Product Matched',
-        //                                                     text:  'Hi ! There is new recummendation for you at Bridge please check it out.'
-        //                                                     };
+                                            for(var i=0;i<users.length;i++)
+                                                {
+                                                        listofemails.push((users[i].email));
+                                                }
 
 
-        //                                                     await transporter.sendMail(mailOptions);
+                                            console.log(listofemails);    //  var listofemails = ["prashantsh@gmail.com","prashant1sh@gmail.com"]; 
 
-        //                                                 }
-        //                                                 catch(e)
-        //                                                 {
-        //                                                     console.log(e);
-        //                                                     res.redirect('back');
-        //                                                     // res.send("oops!");
-        //                                                 }
-        //                                     }
+                                            if(listofemails.length>0)
+                                            {
+                                                    try{
+
+                                                            var mailOptions = {
+                                                            from:'Bridge<bridgebetweenus@outlook.com>',
+                                                            bcc: listofemails,
+                                                            subject: 'Product Matched',
+                                                            text:  'Hi ! There is new recummendation for you at Bridge please check it out.'
+                                                            };
+
+
+                                                            await transporter.sendMail(mailOptions);
+
+                                                        }
+                                                        catch(e)
+                                                        {
+                                                            console.log(e);
+                                                            res.redirect('back');
+                                                            // res.send("oops!");
+                                                        }
+                                            }
 
 
          
         
-        // // Email code ends here              
+        // Email code ends here              
 
         res.render("newpro",{prost:"Product added"})
 
