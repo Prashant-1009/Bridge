@@ -50,13 +50,13 @@ router.post("/login", async (req, res) => {
            if(1)
             {
 
-                        const reqdata = await axios.get(process.env.fapi+'/api/yourreqdata', {
+                        const reqdata = await axios.get('https://bridge-o23k.onrender.com/api/yourreqdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
                   
-                        const matchedreq = await axios.get(process.env.fapi+'/api/matchedreqdata', {
+                        const matchedreq = await axios.get('https://bridge-o23k.onrender.com/api/matchedreqdata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,
@@ -67,14 +67,14 @@ router.post("/login", async (req, res) => {
                         })
 
 
-                        const prodata = await axios.get(process.env.fapi+'/api/yourproductdata', {
+                        const prodata = await axios.get('https://bridge-o23k.onrender.com/api/yourproductdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
 
 
-                        const matchedpro = await axios.get(process.env.fapi+'/api/matchedprodata', {
+                        const matchedpro = await axios.get('https://bridge-o23k.onrender.com/api/matchedprodata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,
