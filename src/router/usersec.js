@@ -46,17 +46,16 @@ router.post("/login", async (req, res) => {
         const details = await user.findOne({ rollno: interedrollno });
         const mobile = details.mobileno;
 
-           // if (details.password === interedpassword) 
-           if(1)
+            if (details.password === interedpassword) 
             {
 
-                        const reqdata = await axios.get('https://bridge-o23k.onrender.com/api/yourreqdata', {
+                        const reqdata = await axios.get(process.env.fapi+'/api/yourreqdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
                   
-                        const matchedreq = await axios.get('https://bridge-o23k.onrender.com/api/matchedreqdata', {
+                        const matchedreq = await axios.get(process.env.fapi+'/api/matchedreqdata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,
@@ -67,14 +66,14 @@ router.post("/login", async (req, res) => {
                         })
 
 
-                        const prodata = await axios.get('https://bridge-o23k.onrender.com/api/yourproductdata', {
+                        const prodata = await axios.get(process.env.fapi+'/api/yourproductdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
 
 
-                        const matchedpro = await axios.get('https://bridge-o23k.onrender.com/api/matchedprodata', {
+                        const matchedpro = await axios.get(process.env.fapi+'/api/matchedprodata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,
