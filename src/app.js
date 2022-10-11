@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const port = process.env.PORT||5000;
+const port = 8000;
 
 require("./db/conn.js");
 const user = require("./models/schem");
