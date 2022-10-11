@@ -13,10 +13,10 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
 var transporter = nodemailer.createTransport({
-    service: process.env.ser,
+    service: 'hotmail',
     auth: {
-        user: process.env.emm,
-        pass: process.env.pss
+        user: 'bridgesrmgpc@outlook.com',
+        pass: "19012201000@"
     }
 });
 
@@ -59,7 +59,6 @@ router.post("/addproduct", upload, async (req, res) => {
 
         const added = await newpro.save();
 
-        // //Email code starts here 
 
                                             const usersdata=await axios.get(process.env.fapi+'/api/formaildata',{
                                                 params:{
@@ -80,14 +79,12 @@ router.post("/addproduct", upload, async (req, res) => {
                                                 }
 
 
-                                           // console.log(listofemails);    //  var listofemails = ["prashantsh@gmail.com","prashant1sh@gmail.com"]; 
-
                                             if(listofemails.length>0)
                                             {
                                                     try{
 
                                                             var mailOptions = {
-                                                            from:'Bridge<bridgebetweenus@outlook.com>',
+                                                            from:'Bridge<bridgesrmgpc@outlook.com>',
                                                             bcc: listofemails,
                                                             subject: 'Product Matched',
                                                             text:  'Hi ! There is new recummendation for you at Bridge please check it out.'
