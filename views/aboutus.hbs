@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title> About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+     
+<body>
+    
+    <img src="../public/assets/logo.png" width="60%" height="30%">
+    
+    <h1 class="aboutus">Bridge ! Student's Platform</h1>
+    
+    
+    <div class="content1">
+    Bridge is a link between students for sharing,selling and buying resources related to studies among themsevles.
+    </div>
+    
+    <div class="content">
+    Here registered students will get recommendation of the products matched with their profile on this portal and through email as well.    
+    </div>
+    
+    <div class="content">
+    Here students can also raise request for a resource that they need.
+    </div>
+    
+    
+    <div class="logreg">
+       <button type="button" class="btn btn-warning" style="margin-right: 10px; color:white;" onclick="loginab()">&nbsp;&nbsp;Login&nbsp;&nbsp;</button>     
+       <button type="button" class="btn btn-warning" style="margin-left: 10px; color:white" onclick="registerab()">Register</button>
+    </div>
+    
+    
+    <footer class="abfooter">
+             <p>
+                 <a href="https://www.linkedin.com" target="_blank"><img src='../public/assets/linkedin.png'></a>
+                 <a href="https://www.twitter.com" target="_blank"><img src='../public/assets/twitter.png'></a>
+                 <a href="https://www.instagram.com" target="_blank"><img src='../public/assets/instagram.png'></a>
+            </p>
+    </footer>
+    
+
+   <script>
+   
+     function loginab() {
+                      window.open("/login", "_blank");
+        }
+            
+    function registerab() {
+                    window.open("/Register", "_blank");
+                }
+
+   </script>
+
+</body>    
+
+
+</html>

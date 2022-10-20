@@ -60,7 +60,7 @@ router.post("/addproduct", upload, async (req, res) => {
         const added = await newpro.save();
 
 
-                                            const usersdata=await axios.get('https://bridgesrmgpc.herokuapp.com/api/formaildata',{
+                                            const usersdata=await axios.get('http://localhost:8000/api/formaildata',{
                                                 params:{
                                                         rollno:req.body.rollno,
                                                         course:req.body.course,

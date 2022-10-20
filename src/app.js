@@ -72,6 +72,10 @@ app.get('/delac', (req, res) => {
     res.render('delac');
 })
 
+app.get('/aboutus', (req, res) => {
+    res.render('aboutus');
+})
+
 
 
 
