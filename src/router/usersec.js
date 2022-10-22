@@ -49,13 +49,13 @@ router.post("/login", async (req, res) => {
             if (details.password === interedpassword) 
             {
 
-                        const reqdata = await axios.get('http://localhost:8000'+'/api/yourreqdata', {
+                        const reqdata = await axios.get(process.env.fapi+'/api/yourreqdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
                   
-                        const matchedreq = await axios.get('http://localhost:8000'+'/api/matchedreqdata', {
+                        const matchedreq = await axios.get(process.env.fapi+'/api/matchedreqdata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,
@@ -66,14 +66,14 @@ router.post("/login", async (req, res) => {
                         })
 
 
-                        const prodata = await axios.get('http://localhost:8000'+'/api/yourproductdata', {
+                        const prodata = await axios.get(process.env.fapi+'/api/yourproductdata', {
                             params: {
                                 rollno: interedrollno
                             }
                         })
 
 
-                        const matchedpro = await axios.get('http://localhost:8000'+'/api/matchedprodata', {
+                        const matchedpro = await axios.get(process.env.fapi+'/api/matchedprodata', {
                             params: {
                                 rollno: interedrollno,
                                 course: details.course,

@@ -13,10 +13,10 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
 var transporter = nodemailer.createTransport({
-    service: 'hotmail',
+    service: process.env.ser,
     auth: {
-        user: 'bridgesrmgpc@outlook.com',
-        pass: "19012201000@"
+        user: process.env.emm,
+        pass: process.env.pss
     }
 });
 
@@ -60,7 +60,7 @@ router.post("/addproduct", upload, async (req, res) => {
         const added = await newpro.save();
 
 
-                                            const usersdata=await axios.get('http://localhost:8000/api/formaildata',{
+                                            const usersdata=await axios.get(process.env.fapi+'/api/formaildata',{
                                                 params:{
                                                         rollno:req.body.rollno,
                                                         course:req.body.course,
