@@ -441,20 +441,23 @@ input,
 
 
 
+
+
 .content1{
-    
+    text-align: center;
     font: bold 250% Consolas, Monaco, monospace;
     margin-top: 30px;
     margin-bottom: 15px;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .content{
+    text-align: center;
     font: bold 250% Consolas, Monaco, monospace;
     margin-bottom: 15px;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .logreg{
@@ -475,11 +478,10 @@ input,
 
 
 @-webkit-keyframes typing { from { width: 0; } }
-
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
 h1.aboutus { 
-	font: bold 250% Consolas, Monaco, monospace;
+	font: bold 200% Consolas, Monaco, monospace;
     color: #ffbb33;
     text-align: center;
 	width: 15em; 
@@ -495,19 +497,21 @@ h1.aboutus {
 @media screen and (max-width: 480px) {
     
   h1.aboutus {
-        font: bold 130% Consolas, Monaco, monospace;
+        font: bold 100% Consolas, Monaco, monospace;
     }
     
     .content{
         text-align: center;
-        margin-left: 3px;
-        margin-right: 3px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size:10px;
     }
     
     .content1{
         text-align: center;
-        margin-left: 3px;
-        margin-right: 3px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size:10px;
     }
     
 }
