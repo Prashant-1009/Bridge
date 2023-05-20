@@ -1,4 +1,4 @@
-![Abt](https://github.com/Prashant-1009/Bridge/assets/73630426/729de9fa-440a-4316-99a3-5bf65d26de71)
+
 # Bridge 
 
 
