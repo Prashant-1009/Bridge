@@ -15,11 +15,13 @@ Nodejs,hbs,CSS, javascript
 
 # About Us Page 
 
-![IMG_20230520_075326](https://github.com/Prashant-1009/Bridge/assets/73630426/b64e1ee2-7ca2-4e08-9251-b99b6e3c1df4)
+![IMG_20230520_075326](https://github.com/Prashant-1009/Bridge/assets/73630426/569dd5e6-808d-4d66-9950-bb4ddfc1b9af)
+
 
 # Home Page 
 
-![Hom](https://github.com/Prashant-1009/Bridge/assets/73630426/8f16af75-84f1-4516-9d13-86613d7b6dfb)
+![Hom](https://github.com/Prashant-1009/Bridge/assets/73630426/b4d7c52a-8f16-441f-a919-b4e8926c157f)
+
 
 
 
